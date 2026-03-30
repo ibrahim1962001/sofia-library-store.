@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مكتبة صوفي | Sofia Library — أدوات مكتبية، تجميل، هدايا</title>
+  <meta name="description" content="مكتبة صوفي — كل ما تحتاجيه من أدوات مكتبية، مستحضرات تجميل، خردوات، وهدايا رائعة بأفضل الأسعار مع توصيل لكل المحافظات.">
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar">
+  <span class="navbar-brand">مكتبة صوفي | SOFIA</span>
+  <div class="navbar-links">
+    <a href="#categoriesSection">الأقسام</a>
+    <a href="#productsSection">المنتجات</a>
+    <a href="#boxesSection">البوكسات</a>
+    <a href="#reviewsSection">الآراء</a>
+    <a href="https://www.facebook.com/share/17AAMmaY7c/" target="_blank" class="fb-link">فيسبوك 📘</a>
+    <a href="https://wa.me/201026400415" target="_blank" class="wa-link">واتساب 💬</a>
+  </div>
+  <div class="navbar-actions">
+    <button class="btn-icon" id="searchBtn" title="بحث">🔍</button>
+    <button class="btn-icon" id="cartBtn" title="السلة">
+      🛒 <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="قائمة">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Search Bar -->
+<div class="search-bar" id="searchBar">
+  <input type="text" id="navSearchInput" placeholder="ابحثي عن منتج...">
+</div>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#categoriesSection">الأقسام</a>
+  <a href="#productsSection">المنتجات</a>
+  <a href="#boxesSection">البوكسات</a>
+  <a href="#reviewsSection">الآراء</a>
+  <a href="#aboutSection">من نحن</a>
+  <a href="https://wa.me/201026400415" target="_blank">واتساب 💬</a>
+  <a href="https://www.facebook.com/share/17AAMmaY7c/" target="_blank" class="fb-link">فيسبوك 📘</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="heroSection">
+  <div class="hero-inner">
+    <div class="countdown-box">
+      <div class="countdown-item"><div class="num" id="cdDays">00</div><div class="lbl">يوم</div></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-item"><div class="num" id="cdHours">00</div><div class="lbl">ساعة</div></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-item"><div class="num" id="cdMins">00</div><div class="lbl">دقيقة</div></div>
+      <span class="countdown-sep">:</span>
+      <div class="countdown-item"><div class="num" id="cdSecs">00</div><div class="lbl">ثانية</div></div>
+    </div>
+    <h1 class="hero-title">كل ما تحتاجيه في صوفي بين يديكِ ✨</h1>
+    <p class="hero-desc">أدوات مكتبية، مستحضرات تجميل، خردوات، وهدايا رائعة — بأسعار منافسة وتوصيل لكل المحافظات</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('productsSection').scrollIntoView({behavior:'smooth'})">🛍️ تسوقي الآن</button>
+      <button class="btn-outline" onclick="document.getElementById('categoriesSection').scrollIntoView({behavior:'smooth'})">📦 تصفحي الأقسام</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item"><div class="stat-num">+500</div><div class="stat-txt">منتج متاح</div></div>
+      <div class="stat-item"><div class="stat-num">+2000</div><div class="stat-txt">عميلة سعيدة</div></div>
+      <div class="stat-item"><div class="stat-num">+5</div><div class="stat-txt">سنوات خبرة</div></div>
+    </div>
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <span>✏️ <b>الأدوات المكتبية</b></span>
+        <span>💄 <b>مستحضرات التجميل</b></span>
+        <span>🔧 <b>الخردوات</b></span>
+        <span>🎁 <b>الهدايا واللعب</b></span>
+        <span>🔥 <b>العروض والجديد</b></span>
+        <span>🚀 <b>توصيل سريع</b></span>
+        <span>💎 <b>جودة مضمونة</b></span>
+        <!-- duplicate for seamless loop -->
+        <span>✏️ <b>الأدوات المكتبية</b></span>
+        <span>💄 <b>مستحضرات التجميل</b></span>
+        <span>🔧 <b>الخردوات</b></span>
+        <span>🎁 <b>الهدايا واللعب</b></span>
+        <span>🔥 <b>العروض والجديد</b></span>
+        <span>🚀 <b>توصيل سريع</b></span>
+        <span>💎 <b>جودة مضمونة</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CATEGORIES ===== -->
+<section id="categoriesSection">
+  <div class="max-w">
+    <h2 class="section-title">تسوقي من <span>كل الأقسام</span></h2>
+    <p class="section-sub">اختاري القسم المناسب وتصفحي أفضل المنتجات</p>
+    <div class="categories-grid" id="categoriesGrid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRODUCTS ===== -->
+<section id="productsSection">
+  <div class="max-w">
+    <h2 class="section-title">منتجاتنا <span>المميزة</span></h2>
+    <p class="section-sub">أفضل الأسعار وأعلى الجودة</p>
+    <div class="filter-bar">
+      <button class="filter-btn active" data-cat="all">الكل</button>
+      <button class="filter-btn" data-cat="ادوات_مكتبية">✏️ مكتبية</button>
+      <button class="filter-btn" data-cat="تجميل">💄 تجميل</button>
+      <button class="filter-btn" data-cat="خردوات">🔧 خردوات</button>
+      <button class="filter-btn" data-cat="هدايا">🎁 هدايا</button>
+      <button class="filter-btn" data-cat="عروض">🔥 عروض</button>
+      <div class="search-input-wrap">
+        <input type="text" id="productSearchInput" placeholder="🔍 ابحثي...">
+      </div>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <div class="loading-spinner">جاري تحميل المنتجات...</div>
+    </div>
+    <div class="show-more-wrap">
+      <button class="btn-show-more" id="showMoreBtn" style="display:none">عرض المزيد ↓</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY SOFIA ===== -->
+<section class="why-section">
+  <div class="max-w">
+    <h2 class="section-title">لماذا <span>صوفي؟</span></h2>
+    <p class="section-sub">نقدم لكِ أفضل تجربة تسوق</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">🚀</div>
+        <div class="why-title">توصيل سريع</div>
+        <div class="why-desc">توصيل لجميع محافظات مصر في أسرع وقت وبأمان تام</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💎</div>
+        <div class="why-title">جودة مضمونة</div>
+        <div class="why-desc">كل منتجاتنا مختارة بعناية وذات جودة عالية مضمونة</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <div class="why-title">أسعار منافسة</div>
+        <div class="why-desc">أفضل الأسعار في السوق مع عروض وخصومات مستمرة</div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💬</div>
+        <div class="why-title">خدمة 24/7</div>
+        <div class="why-desc">فريقنا متاح طوال الوقت للرد على استفساراتكِ وطلباتكِ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GIFT BOXES ===== -->
+<section id="boxesSection">
+  <div class="max-w">
+    <h2 class="section-title">🎁 اشتري <span>بوكس كامل</span> بسعر أحسن</h2>
+    <p class="section-sub">باقات جاهزة لكل مناسبة بأسعار مميزة</p>
+    <div class="boxes-grid" id="boxesGrid">
+      <div class="loading-spinner">جاري التحميل...</div>
+    </div>
+    <div class="show-more-wrap">
+      <button class="btn-custom-box" onclick="openCustomBoxModal()">🎨 صمّمي بوكس هديتك بنفسك</button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about-section" id="aboutSection">
+  <div class="max-w">
+    <div class="about-grid">
+      <div class="about-text">
+        <h2>عن <span>مكتبة صوفي</span></h2>
+        <p>مكتبة صوفي وجهتكِ الأولى للتسوق الذكي! نقدم لكِ أفضل منتجات الأدوات المكتبية، مستحضرات التجميل، الخردوات، والهدايا — كل ذلك في مكان واحد بأسعار لا تُقاوم.</p>
+        <p>نؤمن بأن كل عميلة تستحق أفضل خدمة، لذلك نحرص على توفير تجربة تسوق سلسة وممتعة مع توصيل سريع وأمين لباب بيتكِ.</p>
+        <div class="about-features">
+          <div class="about-feat"><span class="icon">✅</span>منتجات معتمدة</div>
+          <div class="about-feat"><span class="icon">📦</span>توصيل لكل المحافظات</div>
+          <div class="about-feat"><span class="icon">🔄</span>ضمان استرجاع</div>
+          <div class="about-feat"><span class="icon">💳</span>دفع عند الاستلام</div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="big-text">Sofia</div>
+        <div class="tagline">✨ مكتبتك المفضلة</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faqSection">
+  <div class="max-w">
+    <h2 class="section-title">الأسئلة <span>الشائعة</span></h2>
+    <p class="section-sub">إجابات على أكثر الأسئلة تكراراً</p>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <button class="faq-q">هل التوصيل سريع؟ <span class="arrow">▾</span></button>
+        <div class="faq-a">نعم! نوصل لكِ في خلال 24-48 ساعة داخل القاهرة والجيزة، و2-4 أيام لباقي المحافظات.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">هل توصلوا لكل المحافظات؟ <span class="arrow">▾</span></button>
+        <div class="faq-a">بالتأكيد! نوصل لجميع محافظات مصر بدون استثناء.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">هل الدفع عند الاستلام متاح؟ <span class="arrow">▾</span></button>
+        <div class="faq-a">نعم، الدفع عند الاستلام هو الطريقة الأساسية لدينا — لا تدفعي قبل ما تشوفي منتجك!</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">إيه أعمل لو جالي المنتج مكسور؟ <span class="arrow">▾</span></button>
+        <div class="faq-a">تواصلي معنا فوراً على الواتساب وهنحل المشكلة دلوقتي — ضماننا على جميع المنتجات.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">لو درجة الميكب مش صح أعمل إيه؟ <span class="arrow">▾</span></button>
+        <div class="faq-a">بكل سرور! راسلينا على الواتساب ونقدر نبدل الدرجة أو نرجع المنتج خلال 48 ساعة من الاستلام.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">ما هي طرق الدفع المتاحة؟ <span class="arrow">▾</span></button>
+        <div class="faq-a">دفع عند الاستلام كاش — هذا هو خيارنا الأساسي لضمان راحة عميلاتنا الكريمات.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">ممكن أطلب هدية لحد تاني؟ <span class="arrow">▾</span></button>
+        <div class="faq-a">بكل سرور! اكتبي اسم وعنوان المستلم في ملاحظات الطلب وهنوصلها مغلفة بشكل هدية.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section id="reviewsSection" style="background:var(--bg-card2)">
+  <div class="max-w">
+    <h2 class="section-title">آراء <span>عميلاتنا</span></h2>
+    <p class="section-sub">ماذا قالت عميلاتنا السعيدات؟</p>
+    <div class="reviews-grid" id="reviewsGrid">
+      <div class="loading-spinner">جاري التحميل...</div>
+    </div>
+    <div class="review-form-wrap">
+      <h3>💬 شاركينا رأيكِ</h3>
+      <form id="reviewForm">
+        <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="form-group">
+            <label>الاسم</label>
+            <input type="text" name="rName" placeholder="اسمك" required>
+          </div>
+          <div class="form-group">
+            <label>المحافظة</label>
+            <input type="text" name="rCity" placeholder="مثلاً: القاهرة" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>التقييم</label>
+          <div class="star-picker">
+            <input type="radio" name="rating" id="star5" value="5"><label for="star5">★</label>
+            <input type="radio" name="rating" id="star4" value="4"><label for="star4">★</label>
+            <input type="radio" name="rating" id="star3" value="3"><label for="star3">★</label>
+            <input type="radio" name="rating" id="star2" value="2"><label for="star2">★</label>
+            <input type="radio" name="rating" id="star1" value="1"><label for="star1">★</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>رأيكِ</label>
+          <textarea name="rText" placeholder="شاركي تجربتك مع مكتبة صوفي..." required></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;padding:14px;font-size:1rem">إرسال الرأي ✨</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <h2>مكتبة صوفي | SOFIA LIBRARY</h2>
+      <p>وجهتكِ الأولى للتسوق الذكي — أدوات مكتبية، تجميل، هدايا وأكثر. توصيل لكل المحافظات بأفضل الأسعار.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/201026400415" target="_blank" class="social-btn wa">💬</a>
+        <a href="https://www.facebook.com/share/17AAMmaY7c/" target="_blank" class="social-btn fb fb-link">📘</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h3>الأقسام</h3>
+      <ul>
+        <li><a href="#" onclick="filterCategory('ادوات_مكتبية')">✏️ الأدوات المكتبية</a></li>
+        <li><a href="#" onclick="filterCategory('تجميل')">💄 مستحضرات التجميل</a></li>
+        <li><a href="#" onclick="filterCategory('خردوات')">🔧 الخردوات</a></li>
+        <li><a href="#" onclick="filterCategory('هدايا')">🎁 الهدايا واللعب</a></li>
+        <li><a href="#" onclick="filterCategory('عروض')">🔥 العروض</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact">
+      <h3>تواصلي معنا</h3>
+      <p>📱 واتساب: <a href="https://wa.me/201026400415" class="wa-link">201026400415+</a></p>
+      <p>📘 <a href="https://www.facebook.com/share/17AAMmaY7c/" target="_blank" class="fb-link">صفحتنا على فيسبوك</a></p>
+      <p>⏰ خدمة عملاء 24/7</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 مكتبة صوفي | Sofia Library — جميع الحقوق محفوظة ❤️</p>
+  </div>
+</footer>
+
+<!-- ===== CART DRAWER ===== -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h2>🛒 سلة التسوق</h2>
+    <button class="btn-close-cart" id="closeCart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty" id="cartEmpty">
+      <div class="icon">🛒</div>
+      <p>السلة فارغة</p>
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>الإجمالي:</span>
+      <strong id="cartTotal">0 جنيه</strong>
+    </div>
+    <button class="btn-send-cart" id="sendCartBtn">📲 إرسال الطلب عبر واتساب</button>
+  </div>
+</div>
+
+<!-- ===== PRODUCT DETAIL MODAL ===== -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>تفاصيل المنتج</h2>
+      <button class="btn-close-modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <img id="modalProductImg" class="modal-product-img" src="" alt="المنتج">
+      <div class="modal-product-name" id="modalProductName"></div>
+      <div class="modal-product-price" id="modalProductPrice"></div>
+      <div class="modal-product-desc" id="modalProductDesc"></div>
+      <div class="modal-btns">
+        <button class="btn-wa-order" id="modalOrderBtn">📲 اطلبي الآن</button>
+        <button class="btn-share" id="modalShareBtn">🔗 مشاركة</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== ORDER MODAL ===== -->
+<div class="modal-overlay" id="orderModal">
+  <div class="modal">
+    <div class="modal-header">
+      <h2>📦 تأكيد الطلب</h2>
+      <button class="btn-close-modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <div style="background:var(--bg-dark);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:20px">
+        <div style="font-weight:700;margin-bottom:4px" id="orderProductName"></div>
+        <div style="color:var(--secondary);font-weight:700" id="orderProductPrice"></div>
+      </div>
+      <form class="order-form" id="orderForm">
+        <input type="hidden" id="orderCurrentId">
+        <div class="form-row">
+          <div class="form-group">
+            <label>الاسم الكامل *</label>
+            <input type="text" name="oName" placeholder="اسمك" required>
+          </div>
+          <div class="form-group">
+            <label>رقم التليفون *</label>
+            <input type="tel" name="oPhone" placeholder="01xxxxxxxxx" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>الكمية</label>
+          <input type="number" name="oQty" value="1" min="1">
+        </div>
+        <div class="form-group">
+          <label>العنوان كامل *</label>
+          <input type="text" name="oAddress" placeholder="المحافظة / المدينة / الشارع" required>
+        </div>
+        <div class="form-group">
+          <label>ملاحظات (اختياري)</label>
+          <textarea name="oNotes" placeholder="أي ملاحظات خاصة بطلبك..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit-order">📲 تأكيد الطلب عبر واتساب</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CUSTOM BOX MODAL ===== -->
+<div class="modal-overlay" id="customBoxModal">
+  <div class="modal" style="max-width:700px">
+    <div class="modal-header">
+      <h2>🎨 صمّمي بوكس هديتك</h2>
+      <button class="btn-close-modal">✕</button>
+    </div>
+    <div class="modal-body">
+      <p style="color:var(--text-muted);margin-bottom:20px">اختاري المنتجات التي تريدينها في البوكس</p>
+      <div class="custom-box-grid" id="customBoxGrid"></div>
+      <div class="custom-box-summary">
+        <p>المنتجات المختارة: <strong id="customBoxCount">0</strong></p>
+        <div class="total">الإجمالي: <span id="customBoxTotal">0 جنيه</span></div>
+      </div>
+      <button class="btn-primary" id="sendCustomBox" style="width:100%;padding:14px;font-size:1rem">📲 إرسال طلب البوكس للواتساب</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== WHATSAPP WIDGET ===== -->
+<div class="wa-widget">
+  <a href="https://wa.me/201026400415" target="_blank" class="wa-widget-btn wa-link" title="راسلينا على واتساب">💬</a>
+  <div class="wa-tooltip">تواصلي معنا 💬</div>
+</div>
+
+<!-- ===== FAKE PURCHASE NOTIFICATION ===== -->
+<div class="fake-purchase" id="fakePurchase"></div>
+
+<!-- ===== CART REMINDER POPUP ===== -->
+<div class="cart-reminder" id="cartReminder">
+  <div class="cart-reminder-box">
+    <div class="icon">🛒</div>
+    <h3>لا تنسي سلتك!</h3>
+    <p>عندك منتجات رائعة في السلة — أتمي طلبك الآن واحصلي على خصم خاص!</p>
+    <div class="discount-code">SOFIA10</div>
+    <button class="btn-reminder-cta" id="reminderCheckout">أتمي الطلب الآن 🛍️</button>
+    <button class="btn-reminder-close" id="reminderClose">لا شكراً، لاحقاً</button>
+  </div>
+</div>
+
+<!-- ===== TOAST CONTAINER ===== -->
+<div class="toast-container" id="toastContainer"></div>
+
+<script type="module" src="js/cart.js?v=2"></script>
+<script type="module" src="js/main.js?v=2"></script>
+</body>
+</html>
